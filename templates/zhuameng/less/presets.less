@@ -1,0 +1,353 @@
+/**
+ * @package Helix Framework
+ * @author JoomShaper http://www.joomshaper.com
+ * @copyright Copyright (c) 2010 - 2018 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or later
+*/
+
+@import 'variables';
+@import 'mixins';
+
+
+body {
+	color: @text_color;
+	background-color: @bg_color;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+
+// Anchor
+a{
+	color: @major_color;
+	&:hover {
+		color: darken(@major_color, 10%);
+	}
+}
+
+// Megamenu 
+.sp-megamenu-parent {
+	>li {
+		&.active>a,
+		&:hover>a {
+			color: @major_color;
+		}
+	}
+
+	.sp-dropdown {
+		li.sp-menu-item {
+			&.active>a:not(.sp-group-title) {
+				color: @major_color;
+			}
+		}
+	}
+
+}
+
+// Off Canvas
+#offcanvas-toggler {
+	>i {
+		color: @text_color;
+		&:hover {
+			color: @major_color;
+		}
+	}
+}
+
+//Button
+.btn-primary,
+.sppb-btn-primary {
+	border-color: darken(@major_color, 6%);
+	background-color: @major_color;
+
+	&:hover {
+		border-color: darken(@major_color, 15%);
+		background-color: darken(@major_color, 10%);
+	}
+}
+
+// Topbar Social
+ul.social-icons {
+
+	>li {
+
+		a {
+
+			&:hover {
+				color: @major_color;
+			}
+		}
+	}
+}
+
+// Page Title
+.sp-page-title {
+	background-color: @major_color;
+}
+
+// Body Innerwrapper
+
+.layout-boxed .body-innerwrapper {
+	background: @bg_color;
+}
+
+// Module
+.sp-module {
+	ul {
+		>li {
+			>a {
+				color: @text_color;
+				&:hover {
+					color: @major_color;
+				}
+			}
+		}
+	}
+
+	.latestnews {
+		>div {
+			>a {
+				color: @text_color;
+				&:hover {
+					color: @major_color;
+				}
+			}
+		}
+	}
+
+	.tagscloud {
+		.tag-name {
+			&:hover {
+				background: @major_color;
+			}	
+		}
+	}
+}
+
+// sp Simple Portfolio
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li.active > a,
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li > a:hover {
+	background: @major_color;
+}
+
+// Search
+.search {
+	.btn-toolbar {
+		button {
+			background: @major_color;
+		}
+	}
+}
+
+
+// Blog
+.post-format {
+	background: @major_color;
+}
+
+.voting-symbol{
+	span.star.active:before{
+		color: @major_color;
+	}
+}
+
+.sp-rating {
+	span.star:hover:before,
+	span.star:hover ~ span.star:before {
+		color: darken(@major_color, 10%);
+	}
+}
+
+.entry-link,
+.entry-quote {
+	background: @major_color;
+}
+
+blockquote {
+	border-color: @major_color;
+}
+
+.carousel-left,
+.carousel-right {
+
+	&:hover {
+		background: @major_color;
+	}
+}
+
+// Footer
+#sp-footer {
+	background: @major_color;
+}
+
+// Comingsoon
+.sp-comingsoon body {
+	background-color: @major_color;
+}
+
+// Pagination 
+.pagination>li>a,
+.pagination>li>span {
+	color: @text_color;
+	&:hover,
+	&:focus {
+		color: @text_color;
+	}
+}
+
+.pagination>.active>a,
+.pagination>.active>span {
+	border-color: @major_color;
+	background-color: @major_color;
+	&:hover,
+	&:focus {
+		border-color: @major_color;
+		background-color: @major_color;
+	}
+}
+
+
+// **************** **************** ************** **************** **************** //
+// **************** ***************   Shaper Finance  **************** *************** //
+// **************** **************** ************** **************** **************** //
+
+
+#sp-search .search form input,
+#sp-search .search form::after,
+.article-info>dd,
+.article-info>dd a,
+.tags a:hover,
+.tags a:focus,
+#sp-left .sp-module.blog-popular-news a,
+#sp-right .sp-module.blog-popular-news a{
+	color: @text_color;
+}
+
+.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner .sp-module .sp-module-content ul > li > a:hover,
+.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner .sp-module .sp-module-content ul > li > a:focus,
+.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner .sp-module .sp-module-content .latestnews > div a:hover,
+.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner .sp-module .sp-module-content .latestnews > div a:focus,
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item > a:not(.sp-group-title):hover,
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a:hover,
+.btn.sppb-btn-link,
+.sppb-btn.sppb-btn-link,
+.btn.btn-link,
+.sppb-btn.btn-link,
+.major-color,
+#sp-top-bar .sppb-media>.pull-left i,
+.sppb-slider-fullwidth-wrapper .sppb-slideshow-fullwidth-item-bg .sppb-fullwidth-title,
+.call-to-action-section .sppb-addon-feature .sppb-icon .sppb-icon-container i,
+.sppb-addon-feature.homepage-feature .sppb-feature-box-title a:hover,
+.sppb-addon-feature.homepage-feature .sppb-icon-container i,
+.sppb-section.agency-feature .sppb-addon-feature .sppb-icon .sppb-icon-container,
+.sppb-section.agency-feature .sppb-addon-feature .sppb-addon-title a:hover,
+.article-info>dd .fa,
+.article-info>dd a:hover,
+.article-info>dd a:focus,
+.tags a,
+.entry-header h2 a:hover,
+.pagination-wrapper .pagination li:first-child:not(.active) a:hover,
+.pagination-wrapper .pagination li:first-child:not(.active) a:focus,
+.pagination-wrapper .pagination li:first-child:not(.active):hover a,
+.pagination-wrapper .pagination li:last-child:not(.active) a:hover,
+.pagination-wrapper .pagination li:last-child:not(.active) a:focus ,
+.pagination-wrapper .pagination li:last-child:not(.active):hover a,
+#sp-left .search form:after,
+#sp-right .search form:after,
+#sp-left .sp-module.blog-popular-news a:hover,
+#sp-right .sp-module.blog-popular-news a:hover,
+#sp-left .sp-module.blog-popular-news a:focus,
+#sp-right .sp-module.blog-popular-news a:focus,
+#sp-left .sp-module.blog-tag-cloud ul li a:hover,
+#sp-right .sp-module.blog-tag-cloud ul li a:hover,
+#sp-left .sp-module.blog-tag-cloud ul li a:focus,
+#sp-right .sp-module.blog-tag-cloud ul li a:focus,
+.blog-details-content-wrap .sppb-addon-feature .sppb-icon .sppb-icon-container,
+.blog-details-content-wrap .sppb-addon-feature .sppb-addon-text em,
+#sp-bottom .sp-module ul li a:hover,
+.sp-simpleportfolio.sp-simpleportfolio-view-items .sp-simpleportfolio-filter ul li a:hover,
+.sp-simpleportfolio.sp-simpleportfolio-view-items .sp-simpleportfolio-filter ul li.active a,
+.sp-simpleportfolio.sp-simpleportfolio-view-items .sp-simpleportfolio-items .sp-simpleportfolio-item .sp-simpleportfolio-info .sp-simpleportfolio-title a:hover,
+.sp-simpleportfolio.sp-simpleportfolio-view-items .sp-simpleportfolio-items .sp-simpleportfolio-item .sp-simpleportfolio-info-wrap .sp-simpleportfolio-title a:hover,
+.sp-simpleportfolio.sp-simpleportfolio-view-items .sp-simpleportfolio-items .sp-simpleportfolio-item .sp-simpleportfolio-info .sp-simpleportfolio-title a:focus,
+.sp-simpleportfolio.sp-simpleportfolio-view-items .sp-simpleportfolio-items .sp-simpleportfolio-item .sp-simpleportfolio-info-wrap .sp-simpleportfolio-title a:focus,
+.sppb-addon-accordion.finance-accordion .sppb-panel-group .sppb-panel-heading .sppb-toggle-direction i,
+.sppb-addon-tab .sppb-tab .sppb-nav li a i,
+.sppb-addon-animated-number .sppb-animated-number,
+.pricing-plan-comparison table tr td i.fa-check,
+.sppb-addon-pricing-table .sppb-pricing-header .sppb-pricing-price-container .sppb-pricing-price,
+.sppb-addon-pricing-table .sppb-pricing-header .sppb-pricing-price-container .sppb-pricing-price .sppb-pricing-price-symbol,
+.sppb-addon-pricing-table:hover .sppb-btn.sppb-btn-info,
+.sppb-addon-pricing-table.featured .sppb-btn.sppb-btn-info,
+.sppb-addon-pricing-table.featured:hover .sppb-pricing-header .sppb-pricing-price-container .sppb-pricing-price,
+.sppb-addon-pricing-table.featured:hover .sppb-pricing-header .sppb-pricing-price-container .sppb-pricing-price .sppb-pricing-price-symbol,
+.free-consulting .sppb-icon .sppb-icon-container{
+  color: @major_color;
+}
+.btn.btn-primary,
+.sppb-btn.btn-primary,
+.btn.sppb-btn-primary,
+.sppb-btn.sppb-btn-primary,
+.btn.sppb-btn-info,
+.sppb-btn.sppb-btn-info,
+.btn.btn-info,
+.sppb-btn.btn-info{
+	background-color: @major_color;
+}
+.sp-megamenu-parent > li > a::before,
+.major-background-color,
+#sp-header.menu-fixed,
+#sp-logo-wrapper,
+.sppb-slider-fullwidth-wrapper .owl-controls .owl-dots .owl-dot.active span,
+.sppb-slider-fullwidth-wrapper .customNavigation a,
+.helix-social-share .helix-social-share-icon ul li div a:hover,
+.helix-social-share .helix-social-share-icon ul li div a:focus,
+.pagination-wrapper .pagination li span:hover,
+.pagination-wrapper .pagination li a:hover,
+.pagination-wrapper .pagination li span:focus,
+.pagination-wrapper .pagination li a:focus,
+.com-tags #adminForm .btn-group button,
+.blog-details-content-wrap .pager.pagenav li a,
+.blog-details-content-wrap .article-footer-wrap .helix-social-share ul li a,
+.sppb-addon-blocknumber .sppb-blocknumber-number,
+.sppb-addon-text-block.block-number .sppb-addon-title,
+.pricing-plan-comparison table tr th.featured-price,
+.sppb-addon-pricing-table:hover,
+.sppb-addon-pricing-table.featured,
+.sppb-addon-pricing-table.featured:hover .sppb-btn.sppb-btn-info{
+	background: @major_color;
+}
+.btn.btn-primary,
+.sppb-btn.btn-primary,
+.btn.sppb-btn-primary,
+.sppb-btn.sppb-btn-primary,
+.btn.sppb-btn-info,
+.sppb-btn.sppb-btn-info,
+.btn.btn-info,
+.sppb-btn.btn-info {
+	-webkit-box-shadow: 0px 3.5px 0px darken (@major_color, 5%);
+	box-shadow: 0px 3.5px 0px darken (@major_color, 5%);
+}
+.sppb-slider-fullwidth-wrapper .customNavigation a:hover,
+.corporate-feature .sppb-addon-feature:hover {
+    background: darken ( @major_color 10%);
+}
+div.sppb-addon-person .sppb-person-image::before {
+	background: fade (@major_color, 80%);
+}
+#sp-left .sp-module.blog-tag-cloud ul li a:hover,
+#sp-right .sp-module.blog-tag-cloud ul li a:hover,
+#sp-left .sp-module.blog-tag-cloud ul li a:focus,
+#sp-right .sp-module.blog-tag-cloud ul li a:focus,
+.sppb-addon-ajax-contact .sppb-ajax-contact-content .sppb-ajaxt-contact-form .sppb-form-group input:focus,
+.sppb-addon-ajax-contact .sppb-ajax-contact-content .sppb-ajaxt-contact-form .sppb-form-group textarea:focus{
+    border-color: @major_color;
+}
+.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner {
+  background: @megabg_color;
+}
+.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner .sp-module .sp-module-content a,
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item > a,
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item span {
+  color: @megatx_color;
+}
+
